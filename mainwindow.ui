@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModality::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+    <pointsize>-1</pointsize>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Style the MainWindow */
+QMainWindow {
+    background-color: #1E1E2E; /* Deep dark background */
+    color: #FFFFFF; /* White text for readability */
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Style the QMenuBar */
+QMenuBar {
+    background-color: #2A2A3A; /* Darker background for menu bar */
+    color: #ECEFF4; /* Light text */
+    border-bottom: 2px solid #3B3B4B; /* Subtle border for separation */
+}
+
+QMenuBar::item {
+    padding: 5px 10px;
+    background-color: transparent;
+}
+
+QMenuBar::item:selected {
+    background-color: #4C566A; /* Highlight menu item on hover */
+    color: #ECEFF4;
+}
+
+/* Style the QToolBar */
+QToolBar {
+    background-color: #2E3440; /* Toolbar background */
+    border: none;
+    padding: 5px;
+    spacing: 10px;
+}
+
+/* Style QGroupBox */
+QGroupBox {
+    border: 2px solid #88C0D0; /* Subtle cyan border */
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ECEFF4; /* Light text */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 5px 10px;
+    background-color: #3B4252; /* Slightly darker background */
+    color: #ECEFF4;
+    border-radius: 5px;
+}
+
+/* Style QTableWidget */
+QTableWidget {
+    background-color: #2E3440; /* Dark table background */
+    color: #ECEFF4; /* Light text */
+    gridline-color: #4C566A; /* Subtle gridlines */
+    border: 1px solid #4C566A; /* Subtle border */
+}
+
+QHeaderView::section {
+    background-color: #4C566A; /* Header background */
+    color: #ECEFF4; /* Light text */
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid #3B4252;
+}
+
+QTableWidget::item:selected {
+    background-color: #81A1C1; /* Highlight selected row */
+    color: #2E3440; /* Dark text for better contrast */
+}
+
+/* Style QPushButton */
+QPushButton {
+    background-color: #5E81AC; /* Calm blue button */
+    color: #ECEFF4; /* Light text */
+    border: 2px solid #4C566A; /* Subtle border */
+    border-radius: 8px;
+    padding: 7px 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #81A1C1; /* Slightly lighter blue on hover */
+    border: 2px solid #88C0D0; /* Cyan border on hover */
+}
+
+QPushButton:pressed {
+    background-color: #4C566A; /* Darker blue on click */
+    border: 2px solid #3B4252; /* Subtle dark border */
+}
+
+QPushButton:disabled {
+    background-color: #3B4252; /* Disabled gray button */
+    color: #4C566A; /* Dimmed text */
+    border: 2px solid #3B4252;
+}
+
+/* Style QLineEdit */
+QLineEdit {
+    background-color: #3B4252; /* Dark input field */
+    color: #ECEFF4; /* Light text */
+    border: 2px solid #4C566A; /* Subtle border */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #88C0D0; /* Cyan border on focus */
+}
+
+/* Style QScrollBar */
+QScrollBar:vertical, QScrollBar:horizontal {
+    background-color: #2E3440;
+    border: 1px solid #4C566A;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background-color: #81A1C1; /* Light blue handle */
+    border-radius: 5px;
+}
+
+QScrollBar::handle:hover {
+    background-color: #88C0D0; /* Cyan handle on hover */
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+    background-color: #4C566A;
+    border: none;
+    height: 0px;
+    width: 0px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>40</y>
+      <width>471</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>20</pointsize>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Employee Mangement System</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>180</y>
+      <width>761</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Rockwell</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+    </property>
+    <attribute name="verticalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Sno.</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Employee Name</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Employee ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Designation</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Experience</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Age</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="addButton">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>500</y>
+      <width>131</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Rockwell</family>
+      <pointsize>-1</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Add Employee</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="updateButton">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>500</y>
+      <width>111</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Rockwell</family>
+      <pointsize>-1</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Update</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deleteButton">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>500</y>
+      <width>111</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Rockwell</family>
+      <pointsize>-1</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchButton">
+    <property name="geometry">
+     <rect>
+      <x>1360</x>
+      <y>100</y>
+      <width>101</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>170</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Adobe Arabic</family>
+      <pointsize>26</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Employee Details</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>240</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Employee Name:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>290</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Employee ID :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>430</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Age:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>380</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Experience: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>330</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Designation :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditName">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>240</y>
+      <width>113</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditID">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>280</y>
+      <width>113</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditDesignation">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>330</y>
+      <width>113</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditExperience">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>380</y>
+      <width>113</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditAge">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>430</y>
+      <width>113</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

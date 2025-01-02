@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QDialog" name="LoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Style the main dialog */
+QDialog {
+    background-color: #2E3440; /* Dark grayish-blue background */
+    color: #ECEFF4; /* Light text for better contrast */
+    font-family: &quot;Arial&quot;, sans-serif;
+    font-size: 14px;
+    border: 2px solid #4C566A;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Style the QGroupBox */
+QGroupBox {
+    border: 2px solid #88C0D0; /* Soft cyan border */
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #ECEFF4; /* Light text */
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 5px 15px;
+    background-color: #3B4252; /* Slightly darker background */
+    color: #ECEFF4;
+    border-radius: 5px;
+}
+
+/* Style QLabel */
+QLabel {
+    font-size: 20px;
+    color: #D8DEE9; /* Light text color */
+}
+
+/* Style QLineEdit */
+QLineEdit {
+    background-color: #3B4252; /* Dark input field */
+    color: #ECEFF4; /* Light text */
+    border: 2px solid #4C566A; /* Subtle border */
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #88C0D0; /* Cyan border on focus */
+}
+
+/* Style QPushButton */
+QPushButton {
+    background-color: #5E81AC; /* Soft blue button */
+    color: #ECEFF4; /* Light text */
+    border: 2px solid #4C566A; /* Subtle border */
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #81A1C1; /* Lighter blue on hover */
+    border: 2px solid #88C0D0; /* Cyan border */
+}
+
+QPushButton:pressed {
+    background-color: #4C566A; /* Darker blue on click */
+    border: 2px solid #3B4252; /* Darker border */
+}
+
+QPushButton:disabled {
+    background-color: #3B4252; /* Grayish background for disabled button */
+    color: #4C566A; /* Dimmed text */
+    border: 2px solid #3B4252;
+}
+</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>160</y>
+     <width>581</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>LogIn</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>80</y>
+      <width>120</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Username:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>160</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Password :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="usernameLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>90</y>
+      <width>191</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>  &quot;Enter Username&quot;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="passwordLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>170</y>
+      <width>191</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>  &quot;Enter Password&quot;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loginButton">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>260</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>LogIn</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancelButton">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>260</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
